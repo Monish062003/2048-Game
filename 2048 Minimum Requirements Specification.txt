@@ -1,0 +1,26 @@
+Basic Requirements:
+
+GUI-Kivy
+CLI-Python
+
+Functional Requirements :
+
+GUI Requirements :
+1: Grid Layout 
+2: Box Layout
+3: PopUp
+4: Label 
+5: Button
+
+CLI Requirements ;
+1: Datatypes: 5 Arrays(Min), 2 Integers(Min)
+2: 4 Event Listeners (Mouse)
+3: GUI Widget ID's used in the Frontend (for connection)
+4: SQLITE3 Database(For retrieving and storing highscore or currentscore if the currentscore>highscore)
+
+Problems(We might Encounter):
+If we dont find appropriate Mouse Event Listeners , we will have to switch to Keyboard listeners where 
+4, onKeyPress() event listeners will come in handy and so we will have to use 5 buttons in GUI Requirements in total
+
+and If we find appropriate Mouse Event Listeners then we only need 1 button in GUI Requirements
+
