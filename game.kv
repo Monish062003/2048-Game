@@ -1,0 +1,243 @@
+#:import Factory kivy.factory.Factory
+
+ScreenManager:
+    First:
+
+
+<MyPopup@Popup>
+    auto_dismiss:False
+    title:"Score Details"
+    GridLayout:
+        cols:2
+        size:root.width,root.height
+
+        Label:
+            text: 'Your CurrentScore :'
+        Label:
+            text: "root.currentscore_text"
+            id:twoo
+        Label:
+            text: 'Your HighScore :'
+        Label:
+            text: "root.highscore_text"
+            id:fourr
+        Button:
+            text: 'Exit'
+            on_press: root.callbyPopuponexit()
+
+        Button:
+            text: 'Restart'
+            on_press: root.dismiss()
+
+<First>
+    name:"first"
+    GridLayout:
+        cols:2
+        size:root.width,root.height
+
+
+        GridLayout:
+            cols:4
+            rows:4
+            size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:zero
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:one
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:two
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:three
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:four
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:five
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:six
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:seven
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:eight
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:nine
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:ten
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:eleven
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:twelve
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:thirteen
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+
+            Label:
+                text:"0"
+                id:fourteen
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+            Label:
+                text:"0"
+                id:fifteen
+                font_size:25
+                color:(141,51,255)
+                size:root.width,root.height
+
+        GridLayout:
+            rows:6
+            size_hint:None,None
+            size:100,600
+
+            Button:
+                text:"Start"
+                font_size:20
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+                color:(51,255,174)
+                on_press:root.start()
+
+            GridLayout:
+                rows:5
+                size:root.width,root.height
+                canvas.before:
+                    Rectangle:
+                        size:self.size
+                        pos:self.pos
+
+
+                Button:
+                    text:"Up"
+                    font_size:20
+                    color:(51,255,174)
+                    on_press:root.up()
+
+                Button:
+                    text:"Down"
+                    font_size:20
+                    color:(51,255,174)
+                    on_press:root.down()
+
+
+                Button:
+                    text:"Left"
+                    font_size:20
+                    color:(51,255,174)
+                    on_press:root.left()
+
+
+                Button:
+                    text:"Right"
+                    font_size:20
+                    color:(51,255,174)
+                    on_press:root.right()
+
+                Button:
+                    text:"End"
+                    font_size:20
+                    color:(51,255,174)
+                    on_press:root.callbyPopuponrestart()
+                    on_press:Factory.MyPopup().open()
+
+            Label:
+                text:"HIGH\nSCORE"
+                font_size:20
+                size:root.width,root.height
+                color:(252, 115, 3)
+
+            Label:
+                text:"0"
+                id:highscore
+                font_size:25
+                size:root.width,root.height
+
+            Label:
+                text:"CURRENT\nSCORE"
+                font_size:20
+                size:root.width,root.height
+                color:(252, 115, 3)
+
+
+            Label:
+                text:"0"
+                font_size:25
+                id:currscore
+                size:root.width,root.height
+                
